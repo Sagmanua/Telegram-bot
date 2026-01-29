@@ -1,5 +1,5 @@
-#What bot you can setup
-1. Personal Task Manager
+# What bot you can setup
+## 1. Personal Task Manager
 ```
 File: Task_manager_for_1_person.py
 ```
@@ -16,7 +16,7 @@ Key Features:
 
 * Best For: Personal productivity and private to-do lists.
 
-2. Team Task Manager (Admin & Viewer)
+## 2. Team Task Manager (Admin & Viewer)
 ```
 File: Task_manager_with_admin.py
 ```
