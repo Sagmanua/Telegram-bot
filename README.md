@@ -1,25 +1,80 @@
-To setup this telegram bot you need BotFAther in what you ned to crete i bot use comand `/newbot`  that test name of not ex`Task manager` the nesxt step is create username for bot ex`TasK_manager_sagman_bot` in mesage what you get You have HTTP API ex `8325482995:AAE0ni6AgfcsRBz7AeRWU_Ll3FElnOkxeTU`
-ok we crete bot now connect py use my archiv bot_telegram_task_manager_admin.py 
+# Telegram Task Manager Bot Setup
 
-in token write  HTTP APP  
+This guide will help you set up your Telegram Task Manager Bot using Python.  
+
+---
+
+## 1. Create a Bot on Telegram
+
+1. Open Telegram and search for **[BotFather](https://t.me/BotFather)**.
+2. Start a chat with BotFather and run the command:
 ```
-TOKEN = ""
+/newbot
+```
+3. Follow the instructions:
+- **Name your bot**: Example: `Task Manager`
+- **Create a username**: Must end with `_bot`. Example: `Task_manager_sagman_bot`
+4. After creating the bot, BotFather will provide you with an **HTTP API token**. Example:  
+```
+8325482995:AAE0ni6AgfcsRBz7AeRWU_Ll3FElnOkxeTU
+```
+Keep this token safe — you will need it in the next step.
+
+---
+
+## 2. Configure Your Bot in Python
+
+1. Open the file `bot_telegram_task_manager_admin.py`.
+2. Replace the `TOKEN` variable with your bot’s HTTP API token:
+```python
+TOKEN = "YOUR_HTTP_API_TOKEN_HERE"
 ```
 
-OK now crete admin users here you need to write your id (or admin what you want)
+
+## 3. Set Up Admin Users
+
+To manage the bot, you need to define admin users.
+
+1. Replace the ADMINS set with your Telegram user ID(s):
 ```
 ADMINS = {1083670850}  # <-- replace with your Telegram user_id
 ```
-I do in my expalmple 
-ON desktop you can just print your nickname ex `@Sagmanua` print in Search and press on what person tou need and copy link `https://web.telegram.org/a/#1083670850`
-and copy this `1083670850` this is id
-On Phone you can use @RawDataBot this bot you need find you date and there copy `"id"`
-`
+
+2. How to find your user ID:
+
+Desktop: Open your Telegram web client, search for your username, click your profile, and copy the link. The last number is your ID.
+Example: https://web.telegram.org/a/#1083670850 → 1083670850
+
+Mobile: Use the bot @RawDataBot
+ to get your user ID. The bot will return data like:
+``` 
 "chat": {
-            "id": 1083670850,
-            "first_name": "Picachu",
-            "username": "Sagmanua",
-            "type": "private"
-        },
-`
-Nest step test if all work good no for better use we can uplaod it on sever i recomed PythonAnyWhere [Video how you can do this](https://www.youtube.com/watch?v=2TI-tCVhe9k) 
+  "id": 1083670850,
+  "first_name": "Picachu",
+  "username": "Sagmanua",
+  "type": "private"
+}
+```
+## 4. Test Your Bot
+
+1. Run the Python script:
+```
+python bot_telegram_task_manager_admin.py
+```
+
+2. Open Telegram and try sending commands to your bot.
+
+3. If everything works, you are ready to deploy.
+
+
+##5. Deploy the Bot to a Server (Optional)
+
+For continuous operation, deploy your bot to a server. Recommended options include:
+
+* PythonAnywhere: Free and beginner-friendly.
+
+[Watch Tutorial here](https://www.youtube.com/watch?v=2TI-tCVhe9k) 
+
+
+
+
