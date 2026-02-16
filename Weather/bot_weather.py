@@ -5,8 +5,14 @@ from datetime import datetime, timedelta
 import threading
 import time
 import requests
+import os
 
-TOKEN = ""
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 # Database Configuration
